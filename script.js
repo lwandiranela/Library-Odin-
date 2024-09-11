@@ -12,7 +12,7 @@ Book.prototype.toggleRead = function(){
 }
 
 function toggleRead(index){
-    myLibrary[index].toggleRead;
+    myLibrary[index].toggleRead();
     render();
 }
 
@@ -22,16 +22,18 @@ function render(){
     for (let i = 0; i < myLibrary.length; i++){
         let book = myLibrary[i];
         let bookEl = document.createElement('div');
-        bookEl.innerHTML =`
-            <div class = 'card-header>
-                <h3 class = 'title> ${book.title} </h3>
-                <h5 class= 'author'> by ${book.author}</h5>
-            <div>
-            <div class= 'card-body'>
-                <p>${book.pages}</p>
-                <p class = ''read-status>${book.read ? "Read" : 'Not Read Yet'}</p>
-                <button class = 'remove-btn' 'onclick = removeBook(${i}')> Remove </button>
-                <button class = 'toggle-read-btn' 'onclick = toggleRead(${i})'> Toggle Read </button>
+        bookEl.innerHTML = `
+            <div class = "upper-card-header">
+                <div class = "card-header">
+                    <h3 class = "title"> ${book.title} </h3>
+                    <h5 class= "author"> by ${book.author}</h5>
+                <div>
+                <div class= 'card-body'>
+                    <p>${book.pages}</p>
+                    <p class = "read-status">${book.read ? "Read" : 'Not Read Yet'}</p>
+                    <button class = 'remove-btn' onclick = "removeBook(${i})"> Remove </button>
+                    <button class = 'toggle-read-btn' onclick = "toggleRead(${i})"> Toggle Read </button>
+                </div>
             </div>
             `;
         libraryEl.appendChild(bookEl)
