@@ -1,0 +1,54 @@
+.button-baby{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
+
+#new-book-btn{
+    padding: 0 15px;
+    background-color: rgba(139,202,132,255);
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.library-baby{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.the-inputs{
+    margin-bottom: 15px;
+}
+
+label{
+    width: 50px;
+    display: inline-block;
+}
+
+input[type=submit]{
+    color: white;
+    background-color: rgba(139,202,132,255);
+    border-color: rgba(139,202,132,255);
+    border-radius: 5px;
+}
+
+.upper-card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.remove-btn{
+    background-color: rgba(255,51,54,255);
+    border-radius: 5px;
+    color: white;
+}
+
+
+
